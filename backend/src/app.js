@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 const orderRouter = require("./routers/orderRouter");
 
 var corsOptions = {
-  origin: "*",
+  origin: "https://deploy-mern-frontend-five.vercel.app",
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
