@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
-const { mongoDBURL } = require("../secret");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(mongoDBURL);
+    await mongoose.connect(
+      "mongodb+srv://gofood:gofood@cluster0.zdkjv4t.mongodb.net/goFoodDB"
+    );
     console.log("DB is Connected");
 
     let fetched_food_data = await mongoose.connection.db.collection(

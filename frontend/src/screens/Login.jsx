@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
+import API from "../components/Api";
 import { NavLink, useNavigate } from "react-router-dom";
 const Login = () => {
   const [user, setUser] = useState({ email: "", password: "" });
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3001/user/login", {
+    const response = await fetch(`${API}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

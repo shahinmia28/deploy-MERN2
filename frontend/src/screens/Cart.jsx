@@ -1,5 +1,5 @@
 import { useCart, useDispatchCart } from "../components/ContextReducer";
-
+import API from "../components/Api";
 const Cart = () => {
   let data = useCart();
   let dispatch = useDispatchCart();
@@ -15,7 +15,7 @@ const Cart = () => {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
 
-    let response = await fetch("http://localhost:3001/user/order_data", {
+    let response = await fetch(`${API}/order_data`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
