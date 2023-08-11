@@ -12,6 +12,7 @@ const Login = () => {
       headers: {
         "Content-Type": "application/json",
       },
+      mode:"no-cors"
       body: JSON.stringify({
         email: user.email,
         password: user.password,
