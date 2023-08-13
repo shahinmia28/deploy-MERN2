@@ -18,6 +18,7 @@ const Signup = () => {
       headers: {
         "Content-Type": "application/json",
       },
+
       body: JSON.stringify({
         name: user.name,
         email: user.email,
