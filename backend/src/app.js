@@ -7,7 +7,7 @@ const orderRouter = require("./routers/orderRouter");
 
 const cors = require("cors");
 var corsOptions = {
-  origin: "deploy-mern-frontend-five.vercel.app",
+  origin: "https://deploy-mern-frontend-five.vercel.app",
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
