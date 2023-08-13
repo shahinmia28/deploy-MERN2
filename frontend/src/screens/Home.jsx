@@ -14,6 +14,7 @@ const Home = () => {
         "Content-Type": "application/json",
       },
     });
+    
     response = await response.json();
 
     await setFoodData(response[0]);
