@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import API from "../components/Api";
 const MyOrder = () => {
   const [orderData, setOrderData] = useState({});
 
   const fetchMyOrder = async () => {
-    await fetch(`${API}/user/myorderdata`, {
+    await fetch(`/user/myorderdata`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
