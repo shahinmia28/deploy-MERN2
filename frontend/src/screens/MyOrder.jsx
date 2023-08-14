@@ -4,7 +4,7 @@ const MyOrder = () => {
   const [orderData, setOrderData] = useState({});
 
   const fetchMyOrder = async () => {
-    await fetch(`${API}/myorderdata`, {
+    await fetch(`${API}/user/myorderdata`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
