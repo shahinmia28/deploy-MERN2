@@ -7,16 +7,20 @@ const orderRouter = require("./routers/orderRouter");
 
 const cors = require("cors");
 
-var corsOptions = {
-  origin: "https://deploy-mern-frontend-five.vercel.app",
-  optionsSuccessStatus: 200,
-  methods: [ "GET, PUT, POST, DELETE"],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
-  credentials: true,
-};
+// var corsOptions = {
+//   origin: "https://deploy-mern-frontend-five.vercel.app",
+//   optionsSuccessStatus: 200,
+//   methods: [ "GET, PUT, POST, DELETE"],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
+//   credentials: true,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: ['https://deploy-mern-frontend-five.vercel.app'],
+  methods: [ "GET, POST,],
+  credentials: true,
+}));
 
 //deploy-mern-frontend-five.vercel.app
 
