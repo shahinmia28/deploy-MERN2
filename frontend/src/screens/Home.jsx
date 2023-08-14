@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import { styled } from "styled-components";
+import API from "../components/Api";
 
 const Home = () => {
   const [search, setSearch] = useState("");
