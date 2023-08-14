@@ -15,7 +15,7 @@ const Cart = () => {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
 
-    let response = await fetch(`${API}/order_data`, {
+    let response = await fetch(`${API}/user/order_data`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
