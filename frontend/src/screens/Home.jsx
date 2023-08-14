@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import { styled } from "styled-components";
-import API from "../components/Api";
+
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -9,7 +9,7 @@ const Home = () => {
   const [category, setCategory] = useState([]);
 
   const loadData = async () => {
-    let response = await fetch(`${API}/seed/display_data`, {
+    let response = await fetch(`/seed/display_data`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
