@@ -5,14 +5,18 @@ const app = express();
 const bodyParser = require("body-parser");
 const orderRouter = require("./routers/orderRouter");
 
-// const cors = require("cors");
+const cors = require("cors");
 
-// var corsOptions = {
-//   origin: "https://deploy-mern-frontend-five.vercel.app",
-//   optionsSuccessStatus: 200,
-// };
+var corsOptions = {
+  origin: "https://deploy-mern-frontend-five.vercel.app",
+  optionsSuccessStatus: 200,
+  methods: [ "GET, PUT, POST, DELETE"],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
+  credentials: true,
+};
 
-// app.use(cors());
+app.use(cors(corsOptions));
 
 //deploy-mern-frontend-five.vercel.app
 
