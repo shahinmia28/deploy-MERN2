@@ -9,7 +9,7 @@ const Home = () => {
   const [category, setCategory] = useState([]);
 
   const loadData = async () => {
-    let response = await fetch(`${API}/user/display_data`, {
+    let response = await fetch(`${API}/seed/display_data`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
