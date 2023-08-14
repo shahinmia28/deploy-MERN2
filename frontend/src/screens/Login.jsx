@@ -7,7 +7,7 @@ const Login = () => {
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${API}/login`, {
+    const response = await fetch(`${API}/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
