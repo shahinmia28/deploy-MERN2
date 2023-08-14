@@ -11,7 +11,6 @@ const Home = () => {
   const loadData = async () => {
     let response = await fetch(`${API}/user/display_data`, {
       method: "POST",
-      credentials: 'include'
       headers: {
         "Content-Type": "application/json",
       },
