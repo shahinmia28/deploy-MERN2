@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
 import { NavLink, useNavigate } from "react-router-dom";
-import API from "../components/Api";
 const Signup = () => {
   const [user, setUser] = useState({
     name: "",
@@ -13,7 +12,7 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${API}/user/create`, {
+    const response = await fetch(`/user/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
